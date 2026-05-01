@@ -19,6 +19,10 @@ function loadData() {
   return data;
 }
 
+function saveData() {
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2), "utf8");
+}
+
 const queries = {
   getLeaderboard() {
     const users = loadData().users;
@@ -53,6 +57,59 @@ const queries = {
   },
 };
 
+const mutations = {
+  createUser(userData) {
+    const users = loadData().users;
+    const newId = users.length > 0 ? Math.max(...users.map((u) => u.id)) + 1 : 1;
+    const { firstName, lastName, score = 0, address = "", email = "", phone = "", website = "", company = "" } = userData;
+    const newUser = {
+      id: newId,
+      name: `${firstName} ${lastName}`,
+      score,
+      firstName,
+      lastName,
+      address,
+      email,
+      phone,
+      website,
+      company,
+    };
+    users.push(newUser);
+    saveData();
+    return newUser;
+  },
+
+  updateUser(id, userData) {
+    const users = loadData().users;
+    const index = users.findIndex((u) => u.id === id);
+
+    if (index === -1) return null;
+
+    const existing = users[index];
+    const updated = { ...existing, ...userData };
+
+    if (userData.firstName || userData.lastName) {
+      updated.name = `${updated.firstName} ${updated.lastName}`;
+    }
+
+    users[index] = updated;
+    saveData();
+    return updated;
+  },
+
+  deleteUser(id) {
+    const users = loadData().users;
+    const index = users.findIndex((u) => u.id === id);
+
+    if (index === -1) return false;
+
+    users.splice(index, 1);
+    saveData();
+    return true;
+  },
+};
+
 module.exports = {
   queries,
+  mutations,
 };

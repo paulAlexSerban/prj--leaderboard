@@ -1,4 +1,4 @@
-
+# API Design
 ## Endpoints
 
 | Functionality     | HTTP Method | Endpoint           | Return Codes                           | Description                                               |
