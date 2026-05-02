@@ -12,7 +12,7 @@ let siteConfig = null;
 const allowedUserFields = new Set([
   "firstName",
   "lastName",
-  "score",
+  "scores",
   "address",
   "email",
   "phone",
@@ -30,10 +30,23 @@ function buildName(user) {
   return user.name || "Unknown Player";
 }
 
+function normalizeScores(raw) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+  const result = {};
+  for (const [key, val] of Object.entries(raw)) {
+    const n = Math.floor(Number(val));
+    result[key] = Number.isFinite(n) && n >= 0 ? n : 0;
+  }
+  return result;
+}
+
 function normalizeUser(user) {
+  const scores = normalizeScores(user.scores);
+  const totalScore = Object.values(scores).reduce((a, b) => a + b, 0);
   return {
     id: Number(user.id),
-    score: Number(user.score) || 0,
+    scores,
+    totalScore,
     firstName: user.firstName || "",
     lastName: user.lastName || "",
     address: user.address || "",
@@ -49,7 +62,11 @@ function normalizeUser(user) {
 
 function normalizeDataShape() {
   if (!data || typeof data !== "object") {
-    data = { users: [], announcements: [] };
+    data = { games: [], users: [], announcements: [] };
+  }
+
+  if (!Array.isArray(data.games)) {
+    data.games = [];
   }
 
   if (!Array.isArray(data.users)) {
@@ -76,14 +93,11 @@ function parseUserPayload(userData, isCreate) {
     throw new Error("firstName and lastName are required");
   }
 
-  if (Object.prototype.hasOwnProperty.call(payload, "score")) {
-    const numericScore = Number(payload.score);
-
-    if (!Number.isFinite(numericScore) || numericScore < 0) {
-      throw new Error("score must be a non-negative number");
+  if (Object.prototype.hasOwnProperty.call(payload, "scores")) {
+    if (typeof payload.scores !== "object" || Array.isArray(payload.scores)) {
+      throw new Error("scores must be an object mapping game IDs to non-negative integers");
     }
-
-    payload.score = Math.floor(numericScore);
+    payload.scores = normalizeScores(payload.scores);
   }
 
   return payload;
@@ -143,16 +157,22 @@ function readMarkdownFile(fileName) {
 }
 
 const queries = {
+  getGames() {
+    return loadData().games;
+  },
+
   getLeaderboard(options = {}) {
-    const { limit } = options;
+    const { limit, gameId } = options;
     const users = loadData().users;
+
     const entries = users
-      .map((user, index) => ({
+      .map((user) => ({
         userId: user.id,
         name: user.name,
-        score: user.score,
-        rank: index + 1,
+        score: gameId ? (user.scores[gameId] || 0) : user.totalScore,
+        gameId: gameId || null,
       }))
+      .filter((e) => e.score > 0)
       .sort((a, b) => b.score - a.score)
       .map((entry, index) => ({ ...entry, rank: index + 1 }));
 
@@ -201,32 +221,39 @@ const queries = {
   },
 
   getUserById(id) {
-    const users = loadData().users;
-    const user = users.find((u) => u.id === id);
+    const d = loadData();
+    const user = d.users.find((u) => u.id === id);
 
     if (!user) return null;
 
     const leaderboard = queries.getLeaderboard();
     const rankEntry = leaderboard.find((entry) => entry.userId === id);
 
+    const gameScores = d.games.map((game) => ({
+      gameId: game.id,
+      gameName: game.name,
+      score: user.scores[game.id] || 0,
+    }));
+
     return {
       ...user,
       rank: rankEntry?.rank || null,
+      gameScores,
     };
   },
 
   getBusinessSnapshot() {
-    const users = loadData().users;
+    const d = loadData();
     const leaderboard = queries.getLeaderboard();
-    const totalUsers = users.length;
-    const totalScore = users.reduce((sum, user) => sum + user.score, 0);
+    const totalUsers = d.users.length;
+    const totalGames = d.games.length;
 
     return {
       totalUsers,
-      averageScore: totalUsers ? Math.round(totalScore / totalUsers) : 0,
+      totalGames,
       topScore: leaderboard[0]?.score || 0,
       topPlayers: leaderboard.slice(0, 3),
-      announcements: loadData().announcements.slice(0, 4),
+      announcements: d.announcements.slice(0, 4),
     };
   },
 
@@ -260,7 +287,7 @@ const mutations = {
 
     const newUser = normalizeUser({
       id: newId,
-      score: 0,
+      scores: {},
       ...payload,
     });
 
@@ -281,7 +308,11 @@ const mutations = {
     }
 
     const existing = users[index];
-    const updated = normalizeUser({ ...existing, ...payload });
+    // Deep-merge scores so a partial {scores: {"apex-arena": 999}} doesn't wipe other games.
+    const mergedScores = payload.scores
+      ? { ...existing.scores, ...payload.scores }
+      : existing.scores;
+    const updated = normalizeUser({ ...existing, ...payload, scores: mergedScores });
 
     users[index] = updated;
     saveData();

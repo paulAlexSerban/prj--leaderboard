@@ -238,6 +238,34 @@ a {
   color: var(--muted);
 }
 
+.game-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 auto 1.5rem;
+  max-width: 1080px;
+  padding: 0 1.4rem;
+}
+
+.game-tab {
+  text-decoration: none;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--brand-dark);
+  border: 1.5px solid var(--line);
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+}
+
+.game-tab:hover,
+.game-tab.active {
+  background: var(--brand-dark);
+  color: #fff;
+  border-color: var(--brand-dark);
+}
+
 .filter-row {
   display: grid;
   grid-template-columns: 1fr 220px 120px;

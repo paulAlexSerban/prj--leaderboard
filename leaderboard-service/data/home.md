@@ -1,16 +1,19 @@
-# Welcome To PulseBoard
+# Welcome to PulseBoard
 
-PulseBoard is the public-facing platform for competitive ranking insights in online gaming.
-Our product combines player-first leaderboard visibility with business-grade operational metrics.
+PulseBoard is the competitive ranking hub for four live gaming titles.
+Every match, drift run, wave, and combo updates your score in real time — and your rank follows immediately.
 
-## What You Can Explore
+## Four Games, One Platform
 
-- Live leaderboard standings with reliable rank ordering.
-- Player profile pages with detailed metadata.
-- Business pages that explain operations, services, and roadmap.
+- **Apex Arena** — Battle Royale: 100-player elimination with dynamic zone mechanics.
+- **Turbo Drift** — Racing: precision drift runs scored on line accuracy, speed, and style.
+- **Dark Siege** — Tower Defense: strategic wave defense with real-time economy decisions.
+- **Neon Blitz** — Arcade: high-speed combo chains with a 60-second global refresh.
 
-## Platform Focus
+## What You Can Do Here
 
-> Fast page loads, accurate rankings, and API parity for every key user flow.
+- Browse per-game leaderboards or view the overall cross-game ranking.
+- Drill into any player profile to see their score across every title.
+- Operators can manage player records and query live data through the JSON API.
 
-Use the top navigation to browse player data, business pages, and the API endpoints.
+> Rankings update immediately after each score submission. No delays, no batching.

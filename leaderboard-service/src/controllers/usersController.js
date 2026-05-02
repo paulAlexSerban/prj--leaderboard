@@ -52,6 +52,7 @@ exports.getUserById = (req, res) => {
   res.render("user-profile", {
     title: `${user.firstName} ${user.lastName}`,
     user,
+    games: queries.getGames(),
     ...getNavData(),
   });
 };

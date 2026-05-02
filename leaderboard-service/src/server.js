@@ -1,4 +1,5 @@
 const path = require("node:path");
+const http = require("node:http");
 const express = require("express");
 const { engine } = require("express-handlebars");
 const Handlebars = require("handlebars");
@@ -7,7 +8,7 @@ const { marked } = require("marked");
 const leaderboardRoutes = require("./routes/leaderboard");
 const usersRoutes = require("./routes/users");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 
@@ -37,6 +38,6 @@ app.use(express.json());
 app.use(leaderboardRoutes);
 app.use(usersRoutes);
 
-app.listen(PORT, () => {
+http.createServer(app).listen(PORT, () => {
   console.log(`Leaderboard SSR service listening on port ${PORT}`);
 });

@@ -3,8 +3,8 @@
   <h2>{{user.firstName}} {{user.lastName}}</h2>
 
   <div class="profile-grid">
-    <p><strong>Leaderboard Rank:</strong> {{user.rank}}</p>
-    <p><strong>Current Score:</strong> {{user.score}}</p>
+    <p><strong>Overall Rank:</strong> #{{user.rank}}</p>
+    <p><strong>Total Score:</strong> {{user.totalScore}}</p>
     <p><strong>Country:</strong> {{user.country}}</p>
     <p><strong>Team:</strong> {{user.team}}</p>
     <p><strong>Address:</strong> {{user.address}}</p>
@@ -14,5 +14,25 @@
     <p><strong>Company:</strong> {{user.company}}</p>
   </div>
 
-  <p><a href="/users">Back to players</a></p>
+  <h3>Per-Game Scores</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Game</th>
+        <th>Score</th>
+        <th>Leaderboard</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each user.gameScores}}
+        <tr>
+          <td>{{gameName}}</td>
+          <td>{{score}}</td>
+          <td><a href="/leaderboard?game={{gameId}}">View</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <p><a href="/users">&larr; Back to players</a></p>
 </article>

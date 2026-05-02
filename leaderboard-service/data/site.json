@@ -3,6 +3,7 @@
     "primary": [
       { "slug": "home", "title": "Home", "label": "Home", "file": "home.md" },
       { "slug": "leaderboard", "title": "Leaderboard", "label": "Leaderboard", "external": false },
+      { "slug": "games", "title": "Games", "label": "Games", "external": false },
       { "slug": "users", "title": "Players", "label": "Players", "external": false }
     ],
     "company": [
@@ -13,6 +14,7 @@
     ],
     "developers": [
       { "slug": "api/leaderboard", "title": "Leaderboard API", "label": "Leaderboard API", "external": true },
+      { "slug": "api/games", "title": "Games API", "label": "Games API", "external": true },
       { "slug": "api/users", "title": "Users API", "label": "Users API", "external": true }
     ]
   },

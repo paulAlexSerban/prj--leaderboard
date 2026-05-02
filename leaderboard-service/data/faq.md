@@ -2,16 +2,35 @@
 
 ## How are ranks calculated?
 
-Players are ranked by score in descending order. Higher score means better rank.
+Within each game, players are ranked by that game's score in descending order.
+The overall leaderboard ranks players by the sum of all their game scores.
 
-## Can we update players from external systems?
+## Can a player rank highly in multiple games?
 
-Yes. Use the user API endpoints to create, update, and delete player records.
+Yes, and it is encouraged. A player who scores well across all four titles will rise
+higher in the overall standings than a single-game specialist with the same top score.
 
-## Is there an API for leaderboard retrieval?
+## Which games does PulseBoard support?
 
-Yes. `GET /api/leaderboard` returns ranked entries and a freshness timestamp.
+Currently four: **Apex Arena** (Battle Royale), **Turbo Drift** (Racing),
+**Dark Siege** (Tower Defense), and **Neon Blitz** (Arcade).
+Visit `/games` for the full catalogue with descriptions.
 
-## How do we find one player quickly?
+## How do I view a specific game's leaderboard?
 
-Use `GET /api/users/:id` or filter the players page with search.
+Navigate to `/leaderboard?game=<game-id>` or use the game tabs on the leaderboard page.
+Valid game IDs: `apex-arena`, `turbo-drift`, `dark-siege`, `neon-blitz`.
+
+## Is there a JSON API for the leaderboard?
+
+Yes. `GET /api/leaderboard` returns the overall ranking.
+`GET /api/leaderboard?game=turbo-drift&limit=10` returns the top 10 for Turbo Drift specifically.
+
+## How are player scores updated?
+
+Use `PUT /api/user/:id` with a `scores` object containing only the games you want to update.
+Other game scores are preserved — it is a merge, not a replace.
+
+## How do I find a specific player quickly?
+
+Use `GET /api/users/:id` or filter the players page with the search box.

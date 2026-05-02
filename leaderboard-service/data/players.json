@@ -1,9 +1,33 @@
 {
+  "games": [
+    {
+      "id": "apex-arena",
+      "name": "Apex Arena",
+      "genre": "Battle Royale",
+      "description": "100-player elimination matches with dynamic zone mechanics and real-time ranking updates."
+    },
+    {
+      "id": "turbo-drift",
+      "name": "Turbo Drift",
+      "genre": "Racing",
+      "description": "Precision drift racing scored on cumulative line accuracy, speed, and style points."
+    },
+    {
+      "id": "dark-siege",
+      "name": "Dark Siege",
+      "genre": "Tower Defense",
+      "description": "Strategic wave-based base defense with real-time economy decisions and leaderboard tiers."
+    },
+    {
+      "id": "neon-blitz",
+      "name": "Neon Blitz",
+      "genre": "Arcade",
+      "description": "High-speed combo-based arcade scoring refreshed to the global leaderboard every 60 seconds."
+    }
+  ],
   "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "score": 980,
       "firstName": "Leanne",
       "lastName": "Graham",
       "address": "Kulas Light, Gwenborough",
@@ -12,12 +36,16 @@
       "website": "hildegard.org",
       "company": "Romaguera-Crona",
       "country": "USA",
-      "team": "Vortex Unit"
+      "team": "Vortex Unit",
+      "scores": {
+        "apex-arena": 980,
+        "turbo-drift": 654,
+        "dark-siege": 720,
+        "neon-blitz": 810
+      }
     },
     {
       "id": 2,
-      "name": "Ervin Howell",
-      "score": 910,
       "firstName": "Ervin",
       "lastName": "Howell",
       "address": "Victor Plains, Wisokyburgh",
@@ -26,12 +54,16 @@
       "website": "anastasia.net",
       "company": "Deckow-Crist",
       "country": "Canada",
-      "team": "Northforge"
+      "team": "Northforge",
+      "scores": {
+        "apex-arena": 740,
+        "turbo-drift": 910,
+        "dark-siege": 580,
+        "neon-blitz": 690
+      }
     },
     {
       "id": 3,
-      "name": "Clementine Bauch",
-      "score": 890,
       "firstName": "Clementine",
       "lastName": "Bauch",
       "address": "Douglas Extension, McKenziehaven",
@@ -40,12 +72,16 @@
       "website": "ramiro.info",
       "company": "Romaguera-Jacobson",
       "country": "Germany",
-      "team": "Arcline 9"
+      "team": "Arcline 9",
+      "scores": {
+        "apex-arena": 890,
+        "turbo-drift": 560,
+        "dark-siege": 840,
+        "neon-blitz": 770
+      }
     },
     {
       "id": 4,
-      "name": "Patricia Lebsack",
-      "score": 860,
       "firstName": "Patricia",
       "lastName": "Lebsack",
       "address": "Hoeger Mall, South Elvis",
@@ -54,12 +90,16 @@
       "website": "kale.biz",
       "company": "Robel-Corkery",
       "country": "France",
-      "team": "Blue Orbit"
+      "team": "Blue Orbit",
+      "scores": {
+        "apex-arena": 610,
+        "turbo-drift": 860,
+        "dark-siege": 920,
+        "neon-blitz": 500
+      }
     },
     {
       "id": 5,
-      "name": "Chelsey Dietrich",
-      "score": 825,
       "firstName": "Chelsey",
       "lastName": "Dietrich",
       "address": "Skiles Walks, Roscoeview",
@@ -68,26 +108,34 @@
       "website": "demarco.info",
       "company": "Keebler LLC",
       "country": "Romania",
-      "team": "Quantum Rush"
+      "team": "Quantum Rush",
+      "scores": {
+        "apex-arena": 720,
+        "turbo-drift": 825,
+        "dark-siege": 640,
+        "neon-blitz": 950
+      }
     },
     {
       "id": 6,
-      "name": "Mrs. Dennis Schulist",
-      "score": 790,
-      "firstName": "Denise",
+      "firstName": "Dennis",
       "lastName": "Schulist",
       "address": "Norberto Crossing, South Christy",
-      "email": "denise@example.com",
+      "email": "dennis@example.com",
       "phone": "1-477-935-8478",
       "website": "ola.org",
       "company": "Considine-Lockman",
       "country": "Spain",
-      "team": "Rogue Sigma"
+      "team": "Rogue Sigma",
+      "scores": {
+        "apex-arena": 790,
+        "turbo-drift": 430,
+        "dark-siege": 710,
+        "neon-blitz": 880
+      }
     },
     {
       "id": 7,
-      "name": "Kurtis Weissnat",
-      "score": 760,
       "firstName": "Kurtis",
       "lastName": "Weissnat",
       "address": "Rex Trail, Howemouth",
@@ -96,12 +144,16 @@
       "website": "elvis.io",
       "company": "Johns Group",
       "country": "UK",
-      "team": "Storm Grid"
+      "team": "Storm Grid",
+      "scores": {
+        "apex-arena": 660,
+        "turbo-drift": 760,
+        "dark-siege": 550,
+        "neon-blitz": 630
+      }
     },
     {
       "id": 8,
-      "name": "Nicholas Runolfsdottir",
-      "score": 735,
       "firstName": "Nicholas",
       "lastName": "Runolfsdottir",
       "address": "Ellsworth Summit, Aliyaview",
@@ -110,12 +162,16 @@
       "website": "jacynthe.com",
       "company": "Abernathy Group",
       "country": "Sweden",
-      "team": "Glacier Ops"
+      "team": "Glacier Ops",
+      "scores": {
+        "apex-arena": 850,
+        "turbo-drift": 735,
+        "dark-siege": 680,
+        "neon-blitz": 590
+      }
     },
     {
       "id": 9,
-      "name": "Glenna Reichert",
-      "score": 700,
       "firstName": "Glenna",
       "lastName": "Reichert",
       "address": "Dayna Park, Bartholomebury",
@@ -124,12 +180,16 @@
       "website": "conrad.com",
       "company": "Yost and Sons",
       "country": "Ireland",
-      "team": "Neon Atlas"
+      "team": "Neon Atlas",
+      "scores": {
+        "apex-arena": 570,
+        "turbo-drift": 488,
+        "dark-siege": 700,
+        "neon-blitz": 825
+      }
     },
     {
       "id": 10,
-      "name": "Clementina DuBuque",
-      "score": 670,
       "firstName": "Clementina",
       "lastName": "DuBuque",
       "address": "Kattie Turnpike, Lebsackbury",
@@ -138,25 +198,31 @@
       "website": "ambrose.net",
       "company": "Hoeger LLC",
       "country": "Portugal",
-      "team": "Meta Circuit"
+      "team": "Meta Circuit",
+      "scores": {
+        "apex-arena": 430,
+        "turbo-drift": 670,
+        "dark-siege": 460,
+        "neon-blitz": 730
+      }
     }
   ],
   "announcements": [
     {
-      "title": "Spring Ranked Season Open",
-      "summary": "Matchmaking windows are expanded and score updates now stream every minute."
+      "title": "Apex Arena Season 4 is Live",
+      "summary": "New dynamic zone mechanics and ranked brackets are active. Top 100 earn exclusive cosmetics."
     },
     {
-      "title": "Operator Console Upgrade",
-      "summary": "Business admins can inspect player performance by region and team cohorts."
+      "title": "Turbo Drift World Cup Qualifiers Open",
+      "summary": "Submit your top 3 track runs before the deadline. Best cumulative drift score advances."
     },
     {
-      "title": "Anti-Cheat V2 Enabled",
-      "summary": "Trusted score audits are now active for all high-skill lobbies."
+      "title": "Dark Siege Balance Patch 2.4",
+      "summary": "Tower upgrade costs reduced 15%, wave scaling rebalanced for tiers 8–12."
     },
     {
-      "title": "Creator Events Program",
-      "summary": "Weekly community events now issue leaderboard multipliers for featured modes."
+      "title": "Neon Blitz Combo Refresh Now Live",
+      "summary": "Combo multiplier data now streams to the global leaderboard every 60 seconds."
     }
   ]
 }

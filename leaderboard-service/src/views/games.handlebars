@@ -1,0 +1,33 @@
+<section class="hero-block">
+  <p class="eyebrow">Game Catalogue</p>
+  <h2>All Games</h2>
+  <p>PulseBoard tracks ranked performance across {{snapshot.totalGames}} competitive titles. Select a game to view its live leaderboard.</p>
+</section>
+
+<section class="stats-grid">
+  <article class="stats-card">
+    <p>Active Players</p>
+    <h3>{{snapshot.totalUsers}}</h3>
+  </article>
+  <article class="stats-card">
+    <p>Games</p>
+    <h3>{{snapshot.totalGames}}</h3>
+  </article>
+  <article class="stats-card">
+    <p>Top Overall Score</p>
+    <h3>{{snapshot.topScore}}</h3>
+  </article>
+</section>
+
+<section class="panel">
+  <ul class="user-grid">
+    {{#each games}}
+      <li class="user-card">
+        <p class="eyebrow">{{genre}}</p>
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <p><a href="/leaderboard?game={{id}}">View Leaderboard &rarr;</a></p>
+      </li>
+    {{/each}}
+  </ul>
+</section>

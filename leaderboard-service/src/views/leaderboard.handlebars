@@ -1,11 +1,18 @@
 <section class="hero-block">
   <p class="eyebrow">Live Competitive Ranking</p>
-  <h2>Latest Leaderboard</h2>
+  <h2>{{title}}</h2>
   <p>
-    PulseBoard tracks performance for high-intent players and surfaces business-ready
-    insights for teams managing competitive products at scale.
+    PulseBoard tracks per-game performance across four titles and surfaces score data
+    for players and business operators managing competitive products at scale.
   </p>
 </section>
+
+<nav class="game-tabs">
+  <a href="/leaderboard" class="game-tab{{#unless currentGame}} active{{/unless}}">Overall</a>
+  {{#each games}}
+    <a href="/leaderboard?game={{id}}" class="game-tab{{#if (eq id ../currentGame.id)}} active{{/if}}">{{name}}</a>
+  {{/each}}
+</nav>
 
 <section class="stats-grid">
   <article class="stats-card">
@@ -13,8 +20,8 @@
     <h3>{{snapshot.totalUsers}}</h3>
   </article>
   <article class="stats-card">
-    <p>Average Score</p>
-    <h3>{{snapshot.averageScore}}</h3>
+    <p>Games</p>
+    <h3>{{snapshot.totalGames}}</h3>
   </article>
   <article class="stats-card">
     <p>Top Score</p>
@@ -23,7 +30,8 @@
 </section>
 
 <section class="panel">
-  <h3>Leaderboard Table</h3>
+  <h3>{{#if currentGame}}{{currentGame.name}} — {{currentGame.genre}}{{else}}Overall Rankings{{/if}}</h3>
+  {{#if currentGame}}<p class="eyebrow">{{currentGame.description}}</p>{{/if}}
   <table>
     <thead>
       <tr>
