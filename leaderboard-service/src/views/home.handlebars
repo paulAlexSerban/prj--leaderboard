@@ -1,0 +1,31 @@
+<section class="hero-block markdown-content">
+  {{{renderMarkdown page.markdown}}}
+</section>
+
+<section class="panel">
+  <h3>Top 10 Players</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each leaderboard}}
+        <tr>
+          <td>
+            {{#if @first}}
+              <span class="rank-badge gold">#{{rank}}</span>
+            {{else}}
+              <span class="rank-badge">#{{rank}}</span>
+            {{/if}}
+          </td>
+          <td><a href="/users/{{userId}}">{{name}}</a></td>
+          <td>{{score}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</section>

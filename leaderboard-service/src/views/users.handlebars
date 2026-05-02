@@ -1,11 +1,36 @@
+<section class="hero-block">
+  <p class="eyebrow">Roster Directory</p>
+  <h2>Players</h2>
+  <p>Browse the current player base and drill into individual profiles.</p>
+</section>
+
+<section class="panel">
+  <form method="GET" action="/users" class="filter-row">
+    <label>
+      Search
+      <input type="text" name="q" value="{{q}}" placeholder="Name, email, country, team" />
+    </label>
+    <label>
+      Sort By
+      <select name="sort">
+        <option value="id">Player ID</option>
+        <option value="name">Name</option>
+        <option value="score">Score</option>
+      </select>
+    </label>
+    <button type="submit">Apply</button>
+  </form>
+</section>
+
 <section>
-  <h2>Users</h2>
   <ul class="user-grid">
     {{#each users}}
-      <li>
+      <li class="user-card">
         <h3><a href="/users/{{id}}">{{name}}</a></h3>
-        <p>Score: {{score}}</p>
-        <p>Email: {{email}}</p>
+        <p><strong>Score:</strong> {{score}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Country:</strong> {{country}}</p>
+        <p><strong>Team:</strong> {{team}}</p>
       </li>
     {{/each}}
   </ul>

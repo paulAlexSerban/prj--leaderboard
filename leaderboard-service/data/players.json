@@ -10,7 +10,9 @@
       "email": "leanne@example.com",
       "phone": "1-770-736-8031",
       "website": "hildegard.org",
-      "company": "Romaguera-Crona"
+      "company": "Romaguera-Crona",
+      "country": "USA",
+      "team": "Vortex Unit"
     },
     {
       "id": 2,
@@ -22,7 +24,9 @@
       "email": "ervin@example.com",
       "phone": "010-692-6593",
       "website": "anastasia.net",
-      "company": "Deckow-Crist"
+      "company": "Deckow-Crist",
+      "country": "Canada",
+      "team": "Northforge"
     },
     {
       "id": 3,
@@ -34,7 +38,9 @@
       "email": "clementine@example.com",
       "phone": "1-463-123-4447",
       "website": "ramiro.info",
-      "company": "Romaguera-Jacobson"
+      "company": "Romaguera-Jacobson",
+      "country": "Germany",
+      "team": "Arcline 9"
     },
     {
       "id": 4,
@@ -46,7 +52,9 @@
       "email": "patricia@example.com",
       "phone": "493-170-9623",
       "website": "kale.biz",
-      "company": "Robel-Corkery"
+      "company": "Robel-Corkery",
+      "country": "France",
+      "team": "Blue Orbit"
     },
     {
       "id": 5,
@@ -58,7 +66,9 @@
       "email": "chelsey@example.com",
       "phone": "(254)954-1289",
       "website": "demarco.info",
-      "company": "Keebler LLC"
+      "company": "Keebler LLC",
+      "country": "Romania",
+      "team": "Quantum Rush"
     },
     {
       "id": 6,
@@ -70,7 +80,9 @@
       "email": "denise@example.com",
       "phone": "1-477-935-8478",
       "website": "ola.org",
-      "company": "Considine-Lockman"
+      "company": "Considine-Lockman",
+      "country": "Spain",
+      "team": "Rogue Sigma"
     },
     {
       "id": 7,
@@ -82,7 +94,9 @@
       "email": "kurtis@example.com",
       "phone": "210.067.6132",
       "website": "elvis.io",
-      "company": "Johns Group"
+      "company": "Johns Group",
+      "country": "UK",
+      "team": "Storm Grid"
     },
     {
       "id": 8,
@@ -94,7 +108,9 @@
       "email": "nicholas@example.com",
       "phone": "586.493.6943",
       "website": "jacynthe.com",
-      "company": "Abernathy Group"
+      "company": "Abernathy Group",
+      "country": "Sweden",
+      "team": "Glacier Ops"
     },
     {
       "id": 9,
@@ -106,7 +122,9 @@
       "email": "glenna@example.com",
       "phone": "(775)976-6794",
       "website": "conrad.com",
-      "company": "Yost and Sons"
+      "company": "Yost and Sons",
+      "country": "Ireland",
+      "team": "Neon Atlas"
     },
     {
       "id": 10,
@@ -118,7 +136,27 @@
       "email": "clementina@example.com",
       "phone": "024-648-3804",
       "website": "ambrose.net",
-      "company": "Hoeger LLC"
+      "company": "Hoeger LLC",
+      "country": "Portugal",
+      "team": "Meta Circuit"
+    }
+  ],
+  "announcements": [
+    {
+      "title": "Spring Ranked Season Open",
+      "summary": "Matchmaking windows are expanded and score updates now stream every minute."
+    },
+    {
+      "title": "Operator Console Upgrade",
+      "summary": "Business admins can inspect player performance by region and team cohorts."
+    },
+    {
+      "title": "Anti-Cheat V2 Enabled",
+      "summary": "Trusted score audits are now active for all high-skill lobbies."
+    },
+    {
+      "title": "Creator Events Program",
+      "summary": "Weekly community events now issue leaderboard multipliers for featured modes."
     }
   ]
 }

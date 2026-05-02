@@ -1,0 +1,29 @@
+{
+	"pages": [
+		{
+			"slug": "home",
+			"title": "Home",
+			"file": "home.md"
+		},
+		{
+			"slug": "about",
+			"title": "About",
+			"file": "about.md"
+		},
+		{
+			"slug": "service",
+			"title": "Services",
+			"file": "service.md"
+		},
+		{
+			"slug": "faq",
+			"title": "FAQ",
+			"file": "faq.md"
+		},
+		{
+			"slug": "contact",
+			"title": "Contact",
+			"file": "contact.md"
+		}
+	]
+}

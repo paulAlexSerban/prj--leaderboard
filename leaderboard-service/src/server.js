@@ -1,6 +1,8 @@
 const path = require("node:path");
 const express = require("express");
 const { engine } = require("express-handlebars");
+const Handlebars = require("handlebars");
+const { marked } = require("marked");
 
 const leaderboardRoutes = require("./routes/leaderboard");
 const usersRoutes = require("./routes/users");
@@ -14,6 +16,12 @@ app.engine(
   "handlebars",
   engine({
     defaultLayout: "main",
+    helpers: {
+      renderMarkdown(markdown = "") {
+        const html = marked.parse(markdown);
+        return new Handlebars.SafeString(html);
+      },
+    },
   })
 );
 app.set("view engine", "handlebars");

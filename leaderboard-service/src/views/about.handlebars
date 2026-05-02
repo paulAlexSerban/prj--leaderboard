@@ -1,0 +1,47 @@
+<section class="hero-block">
+  <p class="eyebrow">Business Overview</p>
+  <h2>Why PulseBoard Exists</h2>
+  <p>
+    The platform helps competitive gaming teams run engaging ranking experiences with
+    low-latency data access, reliable score updates, and clear operational visibility.
+  </p>
+</section>
+
+<section class="stats-grid">
+  <article class="stats-card">
+    <p>Active Players</p>
+    <h3>{{snapshot.totalUsers}}</h3>
+  </article>
+  <article class="stats-card">
+    <p>Average Score</p>
+    <h3>{{snapshot.averageScore}}</h3>
+  </article>
+  <article class="stats-card">
+    <p>Top Score</p>
+    <h3>{{snapshot.topScore}}</h3>
+  </article>
+</section>
+
+<section class="panel">
+  <h3>Top Performers</h3>
+  <ul class="announcement-list">
+    {{#each snapshot.topPlayers}}
+      <li>
+        <strong>#{{rank}} {{name}}</strong>
+        <p>Current score: {{score}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</section>
+
+<section class="panel">
+  <h3>Latest Updates</h3>
+  <ul class="announcement-list">
+    {{#each snapshot.announcements}}
+      <li>
+        <strong>{{title}}</strong>
+        <p>{{summary}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</section>

@@ -1,21 +1,63 @@
-<section>
+<section class="hero-block">
+  <p class="eyebrow">Live Competitive Ranking</p>
   <h2>Latest Leaderboard</h2>
+  <p>
+    PulseBoard tracks performance for high-intent players and surfaces business-ready
+    insights for teams managing competitive products at scale.
+  </p>
+</section>
+
+<section class="stats-grid">
+  <article class="stats-card">
+    <p>Total Players</p>
+    <h3>{{snapshot.totalUsers}}</h3>
+  </article>
+  <article class="stats-card">
+    <p>Average Score</p>
+    <h3>{{snapshot.averageScore}}</h3>
+  </article>
+  <article class="stats-card">
+    <p>Top Score</p>
+    <h3>{{snapshot.topScore}}</h3>
+  </article>
+</section>
+
+<section class="panel">
+  <h3>Leaderboard Table</h3>
   <table>
     <thead>
       <tr>
         <th>Rank</th>
-        <th>User</th>
+        <th>Player</th>
         <th>Score</th>
       </tr>
     </thead>
     <tbody>
       {{#each leaderboard}}
         <tr>
-          <td>{{rank}}</td>
+          <td>
+            {{#if @first}}
+              <span class="rank-badge gold">#{{rank}}</span>
+            {{else}}
+              <span class="rank-badge">#{{rank}}</span>
+            {{/if}}
+          </td>
           <td><a href="/users/{{userId}}">{{name}}</a></td>
           <td>{{score}}</td>
         </tr>
       {{/each}}
     </tbody>
   </table>
+</section>
+
+<section class="panel">
+  <h3>Platform Announcements</h3>
+  <ul class="announcement-list">
+    {{#each snapshot.announcements}}
+      <li>
+        <strong>{{title}}</strong>
+        <p>{{summary}}</p>
+      </li>
+    {{/each}}
+  </ul>
 </section>

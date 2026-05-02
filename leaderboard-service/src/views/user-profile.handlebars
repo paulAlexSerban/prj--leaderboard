@@ -1,11 +1,18 @@
 <article class="profile-card">
+  <p class="eyebrow">Player Profile</p>
   <h2>{{user.firstName}} {{user.lastName}}</h2>
-  <p><strong>Rank:</strong> {{user.rank}}</p>
-  <p><strong>Score:</strong> {{user.score}}</p>
-  <p><strong>Address:</strong> {{user.address}}</p>
-  <p><strong>Email:</strong> {{user.email}}</p>
-  <p><strong>Phone:</strong> {{user.phone}}</p>
-  <p><strong>Website:</strong> {{user.website}}</p>
-  <p><strong>Company:</strong> {{user.company}}</p>
-  <p><a href="/users">Back to users</a></p>
+
+  <div class="profile-grid">
+    <p><strong>Leaderboard Rank:</strong> {{user.rank}}</p>
+    <p><strong>Current Score:</strong> {{user.score}}</p>
+    <p><strong>Country:</strong> {{user.country}}</p>
+    <p><strong>Team:</strong> {{user.team}}</p>
+    <p><strong>Address:</strong> {{user.address}}</p>
+    <p><strong>Email:</strong> {{user.email}}</p>
+    <p><strong>Phone:</strong> {{user.phone}}</p>
+    <p><strong>Website:</strong> {{user.website}}</p>
+    <p><strong>Company:</strong> {{user.company}}</p>
+  </div>
+
+  <p><a href="/users">Back to players</a></p>
 </article>
