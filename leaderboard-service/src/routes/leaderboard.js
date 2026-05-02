@@ -4,7 +4,7 @@ const leaderboardController = require("../controllers/leaderboardController");
 const router = express.Router();
 
 // HTML routes
-router.get("/", leaderboardController.getLeaderboard);
+router.get("/leaderboard", leaderboardController.getLeaderboard);
 
 // API routes
 router.get("/api/leaderboard", leaderboardController.getLeaderboardApi);
