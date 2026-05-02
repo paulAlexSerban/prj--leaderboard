@@ -16,24 +16,89 @@
     <div class="background-shape bg-a"></div>
     <div class="background-shape bg-b"></div>
     <header class="site-header">
-      <div>
+      <div class="header-brand">
         <p class="eyebrow">Gaming Analytics Platform</p>
-        <h1>PulseBoard</h1>
+        <h1><a href="/">PulseBoard</a></h1>
       </div>
       <nav class="top-nav">
-        <a href="/">Home</a>
-        <a href="/leaderboard">Leaderboard</a>
-        <a href="/users">Players</a>
-        <a href="/about">Business</a>
-        <a href="/service">Services</a>
-        <a href="/faq">FAQ</a>
-        <a href="/contact">Contact</a>
-        <a href="/api/leaderboard" target="_blank" rel="noreferrer">API Leaderboard</a>
-        <a href="/api/users" target="_blank" rel="noreferrer">API Users</a>
+        <div class="nav-section">
+          <p class="nav-label">Core</p>
+          {{#each primaryNav}}
+            {{#if external}}
+              <a href="/{{slug}}" target="_blank" rel="noreferrer">{{label}}</a>
+            {{else if (eq slug "leaderboard")}}
+              <a href="/leaderboard">{{label}}</a>
+            {{else if (eq slug "users")}}
+              <a href="/users">{{label}}</a>
+            {{else}}
+              <a href="/{{slug}}">{{label}}</a>
+            {{/if}}
+          {{/each}}
+        </div>
+        <div class="nav-divider"></div>
+        <div class="nav-section">
+          <p class="nav-label">Company</p>
+          {{#each companyNav}}
+            <a href="/{{slug}}">{{label}}</a>
+          {{/each}}
+        </div>
+        <div class="nav-divider"></div>
+        <div class="nav-section">
+          <p class="nav-label">Developers</p>
+          {{#each developerNav}}
+            <a href="{{slug}}" target="_blank" rel="noreferrer">{{label}}</a>
+          {{/each}}
+        </div>
       </nav>
     </header>
     <main class="content">
       {{{body}}}
     </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Navigate</h4>
+          <ul>
+            {{#each primaryNav}}
+              <li>
+                {{#if external}}
+                  <a href="/{{slug}}" target="_blank" rel="noreferrer">{{label}}</a>
+                {{else if (eq slug "leaderboard")}}
+                  <a href="/leaderboard">{{label}}</a>
+                {{else if (eq slug "users")}}
+                  <a href="/users">{{label}}</a>
+                {{else}}
+                  <a href="/{{slug}}">{{label}}</a>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            {{#each companyNav}}
+              <li><a href="/{{slug}}">{{label}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>API &amp; Docs</h4>
+          <ul>
+            {{#each developerNav}}
+              <li><a href="{{slug}}" target="_blank" rel="noreferrer">{{label}}</a></li>
+            {{/each}}
+            <li><a href="/leaderboard">Full Leaderboard Page</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About PulseBoard</h4>
+          <p>A competitive ranking platform built for scale, reliability, and clarity.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PulseBoard. Gaming Analytics Platform.</p>
+      </div>
+    </footer>
   </body>
 </html>

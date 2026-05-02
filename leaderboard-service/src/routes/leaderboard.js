@@ -5,6 +5,7 @@ const router = express.Router();
 
 // HTML routes
 router.get("/", leaderboardController.getHome);
+router.get("/home", leaderboardController.getHome);
 router.get("/leaderboard", leaderboardController.getLeaderboard);
 router.get("/about", leaderboardController.getAbout);
 

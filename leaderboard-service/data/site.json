@@ -1,29 +1,26 @@
 {
-	"pages": [
-		{
-			"slug": "home",
-			"title": "Home",
-			"file": "home.md"
-		},
-		{
-			"slug": "about",
-			"title": "About",
-			"file": "about.md"
-		},
-		{
-			"slug": "service",
-			"title": "Services",
-			"file": "service.md"
-		},
-		{
-			"slug": "faq",
-			"title": "FAQ",
-			"file": "faq.md"
-		},
-		{
-			"slug": "contact",
-			"title": "Contact",
-			"file": "contact.md"
-		}
-	]
+  "navigation": {
+    "primary": [
+      { "slug": "home", "title": "Home", "label": "Home", "file": "home.md" },
+      { "slug": "leaderboard", "title": "Leaderboard", "label": "Leaderboard", "external": false },
+      { "slug": "users", "title": "Players", "label": "Players", "external": false }
+    ],
+    "company": [
+      { "slug": "about", "title": "About", "label": "About Us", "file": "about.md" },
+      { "slug": "service", "title": "Services", "label": "Our Services", "file": "service.md" },
+      { "slug": "faq", "title": "FAQ", "label": "FAQ", "file": "faq.md" },
+      { "slug": "contact", "title": "Contact", "label": "Contact Us", "file": "contact.md" }
+    ],
+    "developers": [
+      { "slug": "api/leaderboard", "title": "Leaderboard API", "label": "Leaderboard API", "external": true },
+      { "slug": "api/users", "title": "Users API", "label": "Users API", "external": true }
+    ]
+  },
+  "pages": [
+    { "slug": "home", "title": "Home", "file": "home.md" },
+    { "slug": "about", "title": "About", "file": "about.md" },
+    { "slug": "service", "title": "Services", "file": "service.md" },
+    { "slug": "faq", "title": "FAQ", "file": "faq.md" },
+    { "slug": "contact", "title": "Contact", "file": "contact.md" }
+  ]
 }

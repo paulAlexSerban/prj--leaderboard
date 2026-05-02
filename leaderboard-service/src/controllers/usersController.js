@@ -1,5 +1,14 @@
 const { queries, mutations } = require("../storage");
 
+function getNavData() {
+  const nav = queries.getSiteNavigation();
+  return {
+    primaryNav: nav.primary || [],
+    companyNav: nav.company || [],
+    developerNav: nav.developers || [],
+  };
+}
+
 function parseUserId(rawId) {
   const id = Number(rawId);
   return Number.isInteger(id) && id > 0 ? id : null;
@@ -15,6 +24,7 @@ exports.getUsers = (req, res) => {
     users,
     q,
     sort,
+    ...getNavData(),
   });
 };
 
@@ -25,6 +35,7 @@ exports.getUserById = (req, res) => {
     return res.status(404).render("not-found", {
       title: "User Not Found",
       message: `No user found with id ${req.params.id}`,
+      ...getNavData(),
     });
   }
 
@@ -34,12 +45,14 @@ exports.getUserById = (req, res) => {
     return res.status(404).render("not-found", {
       title: "User Not Found",
       message: `No user found with id ${req.params.id}`,
+      ...getNavData(),
     });
   }
 
   res.render("user-profile", {
     title: `${user.firstName} ${user.lastName}`,
     user,
+    ...getNavData(),
   });
 };
 

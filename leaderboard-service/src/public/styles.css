@@ -84,6 +84,30 @@ body {
   gap: 0.65rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-section {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0;
+  padding: 0 0.3rem;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--line);
+  margin: 0 0.2rem;
 }
 
 .top-nav a {
@@ -328,9 +352,109 @@ a {
 
   .top-nav {
     justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-section {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .nav-divider {
+    width: 100%;
+    height: 1px;
   }
 
   .filter-row {
     grid-template-columns: 1fr;
   }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-footer {
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.8) 0%, rgba(204, 236, 227, 0.15) 100%);
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+  padding: 2rem 1.4rem 1.5rem;
+}
+
+.footer-content {
+  max-width: 1080px;
+  margin: 0 auto 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-section h4 {
+  margin: 0 0 0.7rem;
+  font-family: "Source Serif 4", serif;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-section li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: var(--brand-dark);
+  font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.header-brand h1 {
+  margin: 0;
+}
+
+.header-brand h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-brand h1 a:hover {
+  opacity: 0.8;
 }

@@ -21,6 +21,9 @@ app.engine(
         const html = marked.parse(markdown);
         return new Handlebars.SafeString(html);
       },
+            eq(a, b) {
+              return a === b;
+            },
     },
   })
 );

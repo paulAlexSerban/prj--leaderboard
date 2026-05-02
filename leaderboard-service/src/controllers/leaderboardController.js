@@ -1,5 +1,14 @@
 const { queries } = require("../storage");
 
+function getNavData() {
+  const nav = queries.getSiteNavigation();
+  return {
+    primaryNav: nav.primary || [],
+    companyNav: nav.company || [],
+    developerNav: nav.developers || [],
+  };
+}
+
 exports.getHome = (_req, res) => {
   const page = queries.getContentPage("home");
   const leaderboard = queries.getLeaderboard({ limit: 10 });
@@ -8,6 +17,7 @@ exports.getHome = (_req, res) => {
     title: page?.title || "Home",
     page,
     leaderboard,
+    ...getNavData(),
   });
 };
 
@@ -19,6 +29,7 @@ exports.getLeaderboard = (_req, res) => {
     title: "Leaderboard",
     leaderboard,
     snapshot,
+    ...getNavData(),
   });
 };
 
@@ -45,10 +56,16 @@ exports.getAbout = (_req, res) => {
     title: page?.title || "About Platform",
     page,
     snapshot,
+    ...getNavData(),
   });
 };
 
 exports.getContentPage = (req, res, next) => {
+  // Keep /home consistent with / even when matched by the generic slug route.
+  if (req.params.slug === "home") {
+    return exports.getHome(req, res);
+  }
+
   const page = queries.getContentPage(req.params.slug);
 
   if (!page) {
@@ -61,5 +78,6 @@ exports.getContentPage = (req, res, next) => {
     title: page.title,
     page,
     snapshot,
+    ...getNavData(),
   });
 };

@@ -114,18 +114,19 @@ function loadSiteConfig() {
   if (siteConfig) return siteConfig;
 
   if (!fs.existsSync(siteConfigPath)) {
-    siteConfig = { pages: [] };
+    siteConfig = { navigation: { primary: [], company: [], developers: [] }, pages: [] };
     return siteConfig;
   }
 
   try {
     const raw = fs.readFileSync(siteConfigPath, "utf8");
-    const parsed = raw.trim() ? JSON.parse(raw) : { pages: [] };
+    const parsed = raw.trim() ? JSON.parse(raw) : { navigation: { primary: [], company: [], developers: [] }, pages: [] };
     siteConfig = {
+      navigation: parsed.navigation || { primary: [], company: [], developers: [] },
       pages: Array.isArray(parsed.pages) ? parsed.pages : [],
     };
   } catch (_error) {
-    siteConfig = { pages: [] };
+    siteConfig = { navigation: { primary: [], company: [], developers: [] }, pages: [] };
   }
 
   return siteConfig;
@@ -227,6 +228,10 @@ const queries = {
       topPlayers: leaderboard.slice(0, 3),
       announcements: loadData().announcements.slice(0, 4),
     };
+  },
+
+  getSiteNavigation() {
+    return loadSiteConfig().navigation;
   },
 
   getSitePages() {
