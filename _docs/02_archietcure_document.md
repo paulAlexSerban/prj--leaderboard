@@ -1,7 +1,7 @@
 # PulseBoard - Leaderboard Service
-> **Document Status**: [Draft / Under Review / Approved / Archived]
-> **Last Updated**: 2026 May 03
-> **Author**: Paul Serban
+> - **Document Status**: Draft
+> - **Last Updated**: 2026 May 03
+> - **Author**: Paul Serban
 
 <!-- 
 INSTRUCTIONS: Replace [Project Name] with your actual project name and provide a brief tagline.
@@ -100,6 +100,8 @@ This should be readable in 2-3 minutes and give a complete picture.
 -->
 
 PulseBoard is a multi-game leaderboard platform designed to provide transparent and real-time competitive standings for gaming organizations. The system follows a layered architecture with a clear separation of concerns between the presentation layer (SSR routes), domain layer (controllers), and data layer (JSON file storage).
+
+![](./_diagrams/01_block_diagram__architecture_evolution__phase_0_to_phase_2-2505042021.png)
 
 **Architecture Style**: Layered architecture with a focus on modularity and separation of concerns.
 

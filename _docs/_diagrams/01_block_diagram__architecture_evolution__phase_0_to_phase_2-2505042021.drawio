@@ -1,0 +1,130 @@
+<mxfile host="65bd71144e">
+    <diagram id="2sjafrzq1zzG6NPejHEw" name="Page-1">
+        <mxGraphModel dx="1558" dy="1709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="48" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-130" y="-80" width="1200" height="900" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="App Sever" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;sketch=1;curveFitting=1;jiggle=2;align=center;verticalAlign=top;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="100" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Software System" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;align=left;verticalAlign=top;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="70" width="200" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font&gt;Single Server&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;sketch=1;curveFitting=1;jiggle=2;align=center;verticalAlign=top;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="120" width="160" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Single Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;sketch=1;curveFitting=1;jiggle=2;align=center;verticalAlign=top;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="120" width="160" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Web Service" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fillStyle=hachure;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="JSON file&lt;div&gt;[Disk]&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=hachure;strokeWidth=2;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="280" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Web Service" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fillStyle=hachure;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Database&lt;div&gt;[Local]&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=hachure;strokeWidth=2;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="280" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;Phase 0&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;Base Monolity&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;(One Single Server)&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="50" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;- simplest possible&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;- file based storage&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;- all components&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;on one server&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="410" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;color: rgb(0, 153, 0);&quot;&gt;Phase 1&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 153, 0);&quot;&gt;Single Server&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 153, 0);&quot;&gt;w. Database&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="50" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;font style=&quot;color: rgb(0, 153, 0);&quot;&gt;- database replaces JSON file&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 153, 0);&quot;&gt;- better concurrency &amp;amp; queries&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 153, 0);&quot;&gt;- vertical scaling only&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="420" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Web Service" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fillStyle=hachure;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="140" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;font style=&quot;color: rgb(204, 0, 0);&quot;&gt;network&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(204, 0, 0);&quot;&gt;latency&lt;/font&gt;&lt;/div&gt;" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;fontColor=#FF0000;fontFamily=Comic Sans MS;fontSize=14;" parent="1" source="17" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="DB Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;sketch=1;curveFitting=1;jiggle=2;align=center;verticalAlign=top;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="300" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Database&lt;div&gt;[Remote]&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=hachure;strokeWidth=2;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="340" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font style=&quot;color: rgb(255, 128, 0);&quot;&gt;Phase 2&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 128, 0);&quot;&gt;Split Service and Database&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="15" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;font style=&quot;color: rgb(255, 128, 0);&quot;&gt;- database on separate server&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 128, 0);&quot;&gt;- network latency introduced&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(255, 128, 0);&quot;&gt;- connection pooling becomes important&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="475" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#23445d;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#CCCCCC;shape=mxgraph.azure.server_rack;strokeWidth=1;gradientColor=none;gradientDirection=east;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="130" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#23445d;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#CCCCCC;shape=mxgraph.azure.server_rack;strokeWidth=1;gradientColor=none;gradientDirection=east;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="130" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#23445d;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#CCCCCC;shape=mxgraph.azure.server_rack;strokeWidth=1;gradientColor=none;gradientDirection=east;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="110" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#23445d;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#CCCCCC;shape=mxgraph.azure.server_rack;strokeWidth=1;gradientColor=none;gradientDirection=east;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="310" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="ARCHITECTURAL&lt;div&gt;BREAKPOINTS&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="-45" y="545" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="endArrow=open;html=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=3;endFill=0;fontSize=14;" parent="1" source="38" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="120" y="577.93" as="sourcePoint"/>
+                        <mxPoint x="920" y="577.93" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="" style="endArrow=open;html=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=3;endFill=0;fontSize=14;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="120" y="577.93" as="sourcePoint"/>
+                        <mxPoint x="317.93639174996383" y="579.6372013788432" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="" style="endArrow=open;html=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=3;endFill=0;fontFamily=Comic Sans MS;fontSize=14;" parent="1" target="38" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="402.42640687119274" y="580" as="sourcePoint"/>
+                        <mxPoint x="920" y="577.93" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="" style="shape=cross;whiteSpace=wrap;html=1;rotation=45;fillColor=#FF9999;strokeColor=#AE4132;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;gradientColor=default;gradientDirection=north;fillStyle=zigzag;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="550" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Breakpoint 0 -&amp;gt; 1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Comic Sans MS;fontColor=#FF0000;fontStyle=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="617.93" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Breakpoint 1 -&amp;gt; 2" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Comic Sans MS;fontColor=#FF0000;fontStyle=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="630.93" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="- high write contention&amp;nbsp;&lt;div&gt;on JSON file&lt;div&gt;- file locking blocks&amp;nbsp;&lt;/div&gt;&lt;div&gt;concurrent requests&lt;/div&gt;&lt;div&gt;- slow file I/O&lt;/div&gt;&lt;div&gt;- degraded response&amp;nbsp;&lt;/div&gt;&lt;div&gt;times&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="637.93" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="- single server resources&amp;nbsp;&lt;div&gt;saturated (CPU/ RAM/ I/O)&lt;div&gt;- database becomes&amp;nbsp;&lt;/div&gt;&lt;div&gt;the bottleneck&lt;/div&gt;&lt;div&gt;- verical scaling hits&amp;nbsp;&lt;/div&gt;&lt;div&gt;limits or high costs&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Comic Sans MS;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="652.93" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;fontSize=14;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="360" y="535" as="sourcePoint"/>
+                        <mxPoint x="360" y="-35" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;fontSize=14;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="535" as="sourcePoint"/>
+                        <mxPoint x="640" y="-35" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="" style="shape=cross;whiteSpace=wrap;html=1;rotation=45;fillColor=#FF9999;strokeColor=#AE4132;fontFamily=Comic Sans MS;sketch=1;curveFitting=1;jiggle=2;gradientColor=default;gradientDirection=north;fillStyle=zigzag;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="550" width="60" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
