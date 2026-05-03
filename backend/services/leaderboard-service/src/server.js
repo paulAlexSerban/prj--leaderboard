@@ -8,7 +8,7 @@ const { marked } = require("marked");
 const leaderboardRoutes = require("./routes/leaderboard");
 const usersRoutes = require("./routes/users");
 
-const PORT = process.env.NODE_PORT || 3000;
+const PORT = process.env.LEADERBOARD_NODE_PORT || 3000;
 const app = express();
 
 app.engine(

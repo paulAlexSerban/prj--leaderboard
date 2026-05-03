@@ -5,21 +5,21 @@ networks:
 
 services:
   # ---------------------------------------------------------------------
-  # | Node.js Service                                               | 
+  # | Node.js Service                                                    | 
   # ---------------------------------------------------------------------
   leaderboard-service:
     build:
       context: ../../../
-      dockerfile: .${SERVICE_PROJECT_PATH}/Dockerfile
+      dockerfile: .${LEADERBOARD_SERVICE_PROJECT_PATH}/Dockerfile
       args:
-        - SERVICE_PROJECT_PATH=${SERVICE_PROJECT_PATH}
-        - NODE_PORT=${NODE_PORT}
+        - LEADERBOARD_SERVICE_PROJECT_PATH=${LEADERBOARD_SERVICE_PROJECT_PATH}
+        - LEADERBOARD_NODE_PORT=${LEADERBOARD_NODE_PORT}
     ports:
-      - "3000:${NODE_PORT}"
+      - "3000:${LEADERBOARD_NODE_PORT}"
     env_file:
       - ../../../.env
     volumes:
       - /usr/src/app/node_modules # Avoids overwriting node_modules with local volume
-      - ../../../${SERVICE_PROJECT_PATH}:/usr/src/app
+      - ../../../${LEADERBOARD_SERVICE_PROJECT_PATH}:/usr/src/app
     networks:
       - leaderboard-network
