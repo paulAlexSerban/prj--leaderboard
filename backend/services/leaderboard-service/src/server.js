@@ -8,10 +8,8 @@ const { marked } = require("marked");
 const leaderboardRoutes = require("./routes/leaderboard");
 const usersRoutes = require("./routes/users");
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.NODE_PORT || 3000;
 const app = express();
-
-
 
 app.engine(
   "handlebars",
@@ -22,11 +20,11 @@ app.engine(
         const html = marked.parse(markdown);
         return new Handlebars.SafeString(html);
       },
-            eq(a, b) {
-              return a === b;
-            },
+      eq(a, b) {
+        return a === b;
+      },
     },
-  })
+  }),
 );
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "views"));
