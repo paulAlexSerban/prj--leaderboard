@@ -3,7 +3,6 @@
 ## Product Vision
 PulseBoard is a leaderboard website and API for multi-game competitive products.
 The service combines two priorities:
-
 1. High-quality player experience through fast per-game ranking pages.
 2. Business visibility through platform metrics and operational pages.
 
