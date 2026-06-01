@@ -21,5 +21,10 @@ services:
     volumes:
       - /usr/src/app/node_modules # Avoids overwriting node_modules with local volume
       - ../../../${LEADERBOARD_SERVICE_PROJECT_PATH}:/usr/src/app
+    deploy:
+      resources:
+        limits:
+          cpus: '1' # 1 CPU core
+          memory: 1024M # 1GB RAM
     networks:
       - leaderboard-network
