@@ -1,1 +1,1 @@
-# prj--leaderboard
+# Leaderboard
